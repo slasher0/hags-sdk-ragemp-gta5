@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Game">
+      <UniqueIdentifier>{e410bf9a-2d67-4ac5-8e65-ebcb3257157a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ex">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Libs">
+      <UniqueIdentifier>{e7f55028-1310-48b3-8837-ab3dc8982fb7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\e_container.h">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\e_cpu.h">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\e_file.h">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\e_gui.h">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\e_guid.h">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\e_guihud.h">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\e_guiwin.h">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\e_input.h">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\e_lib_stdstr.h">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\e_libs.h">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\e_libstr.h">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\e_list.h">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\e_math.h">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\e_math_f.h">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\e_options.h">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\e_patcher.h">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\e_phantom.h">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\e_plugin.h">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\e_sdk.h">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\e_sdk_game.h">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\e_settings.h">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\e_shared.h">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\e_timer.h">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\__ascii.h">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\assert.h">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\e_command.h">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\e_console.h">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="plug.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\gta.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\__api.cpp">
+      <Filter>Libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\__math.cpp">
+      <Filter>Libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\__memcpy.cpp">
+      <Filter>Libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\__operator_new_ext.cpp">
+      <Filter>Libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_fltused.cpp">
+      <Filter>Libs</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="plug.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="vars.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

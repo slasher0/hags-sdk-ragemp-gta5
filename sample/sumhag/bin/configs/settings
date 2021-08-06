@@ -1,0 +1,614 @@
+
+// _int <VAR> <LABEL> <TIP> <MIN> <MAX> <Width> <Height>
+// _tab <NAME>
+// _tab
+// _check <VAR> <LABEL> <TIP>
+// _label <TEXT> <TIP>
+// _br <Height>
+// _hr <Height>
+
+_tab ESP
+	_tab View
+
+		_check esp.active "esp active"
+		_br
+		_check engine.ents_npc "show npc"
+		_br 4
+
+		_list esp.position_vert "Vertical position" "" 160 0 "Top" 1 "Bottom"
+		_br
+		_int esp.position_vert_screen "screen:" "" -50 50 270
+		_br
+		_int esp.position_vert_world "world:" "" -50 50 270
+		_br 4
+		_list esp.position_horiz "Horizontal position" "" 160 0 "Center" 1 "Right" 2 "Left"
+		_br
+		_int esp.position_horiz_screen "screen:" "" -50 50 270
+		_br
+		_int esp.position_horiz_world "world:" "" -50 50 270
+		_br 4
+
+		_hr 14
+		_check esp.bar_use "health bars"
+		_check esp.bar_scale scale
+		_check esp.bar_border border
+		_br 4
+		_int esp.bar_width "width" "" 20 110 270
+		_br
+		_int esp.bar_height "height" "" 1 16 270
+		_br
+		_int esp.bar_dist "dist" "" 1 100 270
+		_br
+	_tab
+	
+//	_tab Filter
+//		_check esp.view_ground "show vehicles"
+//		_br
+//		_check esp.view_air "show aircraft"
+//		_br
+//		_check esp.view_plc "show mines"
+//	_tab
+
+_tab
+
+_tab Radar
+	_br 4
+	_int radar.size "size:" "" 2 10 250
+	_br
+	_int radar.scale "scale:" "" 50 2000 250
+_tab
+
+
+
+_tab Aimbot
+
+	
+	_br 4
+
+	_check bot.lock "Lock at one target"
+	_br
+	_check bot.view "View aim point"
+	_br
+	_check engine.check_vis "Visibility check"
+	_br 4
+	_check bot.adv "Nearest bone aiming"
+	_br
+	_int bot.dist_adv "Nearest max dist:" "" 1 999 250
+	_br
+	_check bot.view2 "Show possible bones"
+	
+
+	_br 8
+	_list bot.filter "Filter:" "" 250 0 "Enemy" 1 "Ally" 2 "Both"
+
+	_br 2
+	_list bot.mode "Target by:" "" 250 1 "FOV" 0 "Dist"
+	_br 2
+	_flt bot.fov "FOV" "" 1 180 300
+	_br 2
+	_flt bot.smooth "Smooth" "" 0 1 300
+	_br 2
+	_flt bot.pred "Prediction" "" 0 1 300
+
+	_br 8
+	_int bot.dist_min "dist_min:" "" 0 500 250
+	_br
+	_int bot.dist_max "dist_max:" "" 1 500 250
+
+
+	_br 10
+
+_tab
+
+
+_tab Character
+	
+	_br 10
+	_check wtf.heavy "Self-Healing" "harder to kill."
+	_br
+	_flt wtf.health_max "healing amount:" "" 100 200 250
+	_br 10
+	_check wtf.armor "Armor-recovery"
+	_br
+	_int wtf.armor_val "recovery amount:" "" 0 100 250
+	_br 10
+	_check wtf.wanted "never wanted" "wtf"
+	_br
+	_check wtf.5stars "always wanted" "wtf"
+	_br
+	_check wtf.no_coll "no collision" "wtf"
+	_br
+	_check wtf.no_anim "skip animation" "wtf"
+	_br
+	_check wtf.stamina "always full stamina" "wtf"
+	_br
+	_check wtf.no_fall "No fall damage" "wtf" 
+
+	_br 10
+	_btn Suicide "wtf.suicide 1" 100
+
+	_br 6
+	_label "Character NoClip (fly)"
+	_br
+	_btn Enable "exec ped-fly.cfg; ufo.speed_mul 30" 80
+	_btn Disable "exec undo-ped-fly.cfg; ufo.speed_mul 0" 80
+	
+
+	_br 10
+	_label "Don't use at FiveM & RageMP & GTA 5 RP"
+	_br 6
+	_check wtf.god "god mode" "wtf"
+_tab
+
+
+
+
+
+
+_tab Wallhack
+
+	_tab Lines
+
+		_br 10
+		_check esp.lazor_draw "Snap lines"
+		_br 5
+		_label "Active for:"
+		_br
+		
+		_check Esp.Filter.obj_invisible.Lazor "Admins"
+		_br
+		_check Esp.Filter.pc_enemy.Lazor "Players Enemies"
+		_br
+		_check Esp.Filter.pc_enemy_visible.Lazor "Visible Players Enemies"
+		_br
+		_check Esp.Filter.pc_friend.Lazor "Players Friends"
+		_br
+		_check Esp.Filter.npc_enemy.Lazor "Bots Enemies"
+		_br
+		_check Esp.Filter.npc_enemy_visible.Lazor "Visible Bots Enemies"
+		_br
+		_check Esp.Filter.npc_friend.Lazor "Bots Friends"
+
+		_br 10
+		_flt esp.lazor_scale "thickness: " "" 0 1 300
+		
+	_tab
+
+	_tab Objects
+
+		_br 10
+		_check engine.ents_debug "Show all objects"
+		_br
+		_check shitmp.allobjects "Hide not-rp objects"
+		_br
+		_check shitmp.objects_validate "Better not-rp filter"
+		_br 5
+		_btn "Clear-filter" "ent_clear" 150
+		_br 5
+		_btn "Reload-filter" "ent_clear" 150
+
+	_tab
+
+	_tab Other
+
+		_br 10
+		_check engine.ents_veh_neutral "Show veh without driver"
+		_br
+		_check engine.ents_veh_unlocked "Show only unlocked vehicles"
+		_br
+		_check engine.ents_veh_active "Show only active vehicles"
+		_br
+		_check engine.ents_dead "Show dead as friends"
+		_br 10
+		
+		_label "How much HP to consider dead"
+		_br 5
+		_flt wtf.health_min "Zero health:" "" 0 200 250
+	_tab
+
+
+	
+_tab
+
+
+_tab Car
+
+	_tab Features
+
+		_br 10
+		_check car.steal "Start engine"
+		_br
+		_check car.open "Open doors"
+		_br
+		_check wtf.car_handel "perfect car handling"
+		_br
+		_check wtf.car_handel_1337 "Add speed speed"
+		_br
+		_check wtf.car_seatbelt "seat belt"
+		_br
+		_check wtf.car_nodeform "unbreakable car"
+		_br 6
+		_check car.heavy "Heal the car"
+		_br
+		_check car.kill "Kill the engine"
+		_br
+		_check car.disable_radio "Switch off the radio"
+		_br 10
+	_tab
+
+	_tab Easy-Flying
+
+		_label "Easy Flying control"
+		_br 10
+		_label "[W] - Fly forward, click W many time to speed up"
+		_br
+		_label "[S] - Fly backwards, click S many times to speed up"
+		_br
+		_label "[A] - Turn left"
+		_br
+		_label "[D] - Turn right"
+		_br 5
+		_label "[numpad_4] - Roll left"
+		_br
+		_label "[numpad_6] - Roll right"
+		_br
+		_label "[numpad_8] - Pitch forward"
+		_br
+		_label "[numpad_2] - Pitch backwards"
+		_br 5
+		_label "[Space] - Stop"
+		_br
+		_label "[V] - Enable/Disable NoClip"
+		_br 10
+		_btn Enable "exec car-flying_easy-control.cfg" 80
+		_btn Disable "exec undo-car-flying.cfg" 80
+	_tab
+
+	_tab Basic-Flying
+
+		_label "Basic Flying control"
+		_br 10
+		_label "[mouse5] - hold to make the car follow your camera"
+		_br 5
+		_label "[Q] - Fly down"
+		_br
+		_label "[E] - Fly up"
+		_br
+		_label "[D] - Strafe right"
+		_br
+		_label "[A] - Strafe left"
+		_br
+		_label "[S] - Fly backwards"
+		_br
+		_label "[W] - Fly forward"
+		_br 5
+		_label "[V] - Enable/Disable NoClip"
+		_br
+		_label "[+] - increase speed"
+		_br
+		_label "[-] - decrease speed"
+		_br 5
+		_label "[numpad_4] - roll left"
+		_br
+		_label "[numpad_6] - roll down"
+		_br
+		_label "[numpad_8] - pitch up"
+		_br
+		_label "[numpad_2] - pitch down"
+		_br
+		_label "[numpad_7] - turn left"
+		_br
+		_label "[numpad_9] - turn right"
+		_br 10
+		_btn Enable "ufo.speed_mul 30; exec car-flying_not-safe.cfg;" 80
+		_btn Disable "ufo.speed_mul 0; exec undo-car-flying.cfg" 80
+	_tab
+_tab
+
+_tab Weapons
+	
+	_br 10
+	_check bot.nospread "norecoil+nospread"
+	_br
+	_check wtf.ammo "Infinite Ammo"
+
+	_br 10
+	_label "HAG should be in the TEST mode"
+	_br
+	_label "NOT SAFE!"
+	_br 5
+	_check wtf.weapons "Enable weapons"
+	_br
+	_check wtf.weapon_eq "Auto equip"
+	_br 10
+	_label "Switch weapons"
+	_br 10
+	_btn "Next" "weapon 1" 90
+	_btn "Prev" "weapon -1" 90
+	_btn "Fix" "weapon 2" 90
+	_br 20
+	_label "Click to spawn"
+	_br 10
+	_btn "BAT" "weapon 0x958A4A8F" 90
+	_btn "RPG" "weapon 0xB1CA77B1" 90
+	_btn "REVOL" "weapon 0xC1B3C3D1" 90
+	_br 20
+	_btn "NIGHTSTICK" "weapon 0x678B81B1" 90
+	_btn "RPG2" "weapon 0x166218FF" 90
+	_btn "SNIPER" "weapon 0x0C472FE2" 90
+	_br 20
+	_btn "HATCHET" "weapon 0x3813FC08" 90
+	_btn "MINIGUN" "weapon 0x42BF8A85" 90
+	_btn "TAZER" "weapon 0x3656C8C1" 90
+	_br 20
+	_label "Need another weapon? You can do it!"
+	_br 5
+	_btn "How?" "print hags-club.com/forum/f53/weapon-spawning-12222/" 90
+	_br
+	_label "Article link will appear in the console"
+
+_tab
+
+
+_tab Weather
+	_br 10
+	_btn "clear" "weather_force 1 " 70
+	_btn "smoky" "weather_force 3 5500 " 70
+	_btn "fogy" "weather_force 4 5500" 70
+	_btn "cloudy" "weather_force 5 5500" 70
+	_br 10
+	_btn "raid" "weather_force 6 5500" 70
+	_btn "storm" "weather_force 7 5500" 70
+	_btn "clear" "weather_force 8 5500" 70
+	_btn "neutral" "weather_force 9 5500" 70
+	_br 10
+	_btn "snow" "weather_force 10 5500" 70
+	_btn "blizzard" "weather_force 11 5500" 70
+	_btn "snowy-light" "weather_force 12 5500" 100
+	_btn "Christmas" "weather_force 13 5500" 90
+	_btn "Halloween" "weather_force 14 5500" 90
+	_br 10
+	_btn "show-the-list" "weather_list" 150
+	_btn "reset" "weather_reset" 70
+_tab
+
+
+_tab Misc
+	
+	_hr 10
+	_label "Save/Load settings"
+	_br 10
+	_btn "Save" "save;gui.save;color.save;font.save"
+	_btn "Load" "exec autoexec.cfg;exec config.cfg"
+	_hr 10
+	_label "Changed the settings file?"
+	_br 10
+	_btn "update menu"  "settings_reload"  120
+	_br
+	_btn "save binds" "binds_save" 110 22
+	_br
+	_btn "clear binds" "binds_clear" 110 22
+	_br 10
+	_check crosshair.enabled "crosshair"
+	_br
+	_check engine.fps "Show FPS"
+	_br 10
+	_int MessagesTime "Green Messages time: (1000 = 1 sec)" "" 1000 50000 350 0
+	_br 10
+	_btn "Quit" "qqq"
+	_br
+_tab
+
+
+_tab Other
+
+	_br 10
+	_btn Teleport-to-Waypoint "goto wp -210" 200
+	_br 10
+	_btn Remove-ninja-block "ninja 0" 200
+_tab
+
+_tab Help
+	
+	_br 10
+	_label "Click the buttons to get help, check the HAG console"
+	_br 10
+	_btn "GTA HAG guide" "print hags-club.com/forum/f53/gta-5-guide-5572/ - Read this forum topic" 150 22
+	_br
+	_btn "HELP ME" "print discord.com/invite/nCctMea - Join this Discord, we will help" 150 22
+
+_tab
+
+_tab Hotkeys
+	
+	_tab Interface
+		
+		_br 10
+		_gbind "gui.toggle;binds_save" 100 20
+		_label " Gui show/hide:"
+		_br
+		_notify "engine.disabled !=" 100 20
+		_label " Hide/Show the HAG"
+		_br
+		_notify "engine.disabled 1; unbind insert; unbind f11" 100 20
+		_label " Hide the HAG"
+		_br
+		_notify "qqq" 100 20
+		_label " Close the game"	
+	_tab
+
+	_tab Aimbot
+		
+		_br 10
+		_notify "+aim" 100 20
+		_label " Aimbot" 100
+		_br
+		_notify "switchBones" 100 20
+		_label " switch bones presets, HEAD/BODY"
+		_br
+		_notify "switchAim" 100 20
+		_label " TOGGLE to aim at the NPC or Not"	
+	_tab
+
+
+	_tab Teleport
+		
+		_br 10
+		_notify "goto wp -210" 100 20
+		_label " Teleport to waypoint"
+		_br
+		_notify "ninja car" 100 20
+		_label " Teleport in the car, 1 click - select, 2 - confirm"
+		_br
+		_notify "ninja" 100 20
+		_label " Click Warp, 1 click - select, 2 - confirm"
+		_br
+		_notify "ninja go 1" 100 20
+		_label " Finish the Click Warp or Teleport in the car"
+		_br
+		_notify "tp_car" 100 20
+		_label " One click into a car teleport"
+		_br
+		_notify "tp_pos" 100 20
+		_label " Instant Click Warp"
+		_br 5
+		_notify "ninja 0"
+		_label " Hide Click Warp block"
+	_tab
+
+	_tab Car
+
+		_br 10
+		_notify "car.steal !=" 100 20
+		_label " Start engine" 200
+		_notify "car.open !=" 100 20
+		_label " Open doors"
+		_br
+		_notify "wtf.car_handel !=" 100 20
+		_label " Perfect driving" 200
+		_notify "wtf.car_handel_1337 !=" 100 20
+		_label " Add more speed"
+		_br
+		_notify "wtf.car_seatbelt !=" 100 20
+		_label " Seat belt" 200
+		_notify "wtf.car_nodeform !=" 100 20
+		_label " Unbreakable car"
+		_br
+		_notify "car.heavy !=" 100 20
+		_label " Repair the engine" 200
+		_notify "car.kill !=" 100 20
+		_label " Destroy the engine"
+		_br
+		_notify "car.disable_radio !=" 100 20
+		_label " Switch off the radio"		
+		
+		_br 10
+		_notify "+car_handel" 100 20
+		_label " Speedhack"
+		_br
+		_notify "carFlySwitch" 100 20
+		_label " Basic Flying"
+		_br
+		_notify "easyCarFlySwitch" 100 20
+		_label " Easy Flying"
+
+	_tab
+
+	_tab Character
+		
+		_br 10
+		_notify "wtf.no_coll !=" 100 20
+		_label " No collision" 200
+		_notify "wtf.no_anim !=" 100 20
+		_label " Skip animation"
+		_br
+		_notify "wtf.stamina !=" 100 20
+		_label " Full stamina" 200
+		_notify "wtf.no_fall !=" 100 20
+		_label " No fall damage"
+		_br
+		_notify "wtf.wanted !=" 100 20
+		_label " Never wanted" 200
+		_notify "wtf.5stars !=" 100 20
+		_label " Always wanted"
+		_br
+		_notify "wtf.suicide 1" 100 20
+		_label " Suicide"
+		
+		_br 10
+		_notify "+heavy" 100 20
+		_label " Self-Healing"
+		_br
+		_notify "armor" 100 20
+		_label " Armor restoration"
+		_br
+		_notify "pedFlySwitch" 100 20
+		_label " NoClip"
+		_br
+		_notify "runThroughSwitch" 100 20
+		_label " Run through the walls"
+		
+	_tab
+
+	_tab Wallhack
+	
+		_br 10
+		_notify "esp.active !="
+		_label " Wallhack On/Off" 100 20
+		_br
+		_notify "switchWh"
+		_label " Switch wallhack preset, All,Visible Only, OFF"
+		_br 10
+		_notify "esp.lazor_draw !="
+		_label " Show snap lines" 200
+		_notify "engine.ents_debug !="
+		_label " Show all objects"
+		_br
+		_notify "shitmp.allobjects !="
+		_label " Hide not-rp objects" 200
+		_notify "shitmp.objects_validate !="
+		_label " Better not-rp filter"
+		_br
+		_notify "engine.ents_veh_neutral !="
+		_label " Show veh without driver" 200
+		_notify "engine.ents_veh_unlocked !="
+		_label " Only unlocked vehicles"
+		_br
+		_notify "engine.ents_veh_active !="
+		_label " Only active vehicles" 200
+		_notify "engine.ents_dead !="
+		_label " Show dead as friends"
+
+
+	_tab
+
+	_tab Weapons
+
+		_br 10
+		_label "HAG should be in the TEST mode"
+		_br
+		_label "NOT SAFE!"
+		_br 5
+		_notify "wtf.weapons !=" 100 20
+		_label " Enable weapons"
+		_br
+		_notify "wtf.ammo !=" 100 20
+		_label " Infinite ammo"
+		_br
+		_notify "weapon 1" 100 20
+		_label " Next weapon"
+		_br
+		_notify "weapon -1" 100 20
+		_label " Previous weapon"
+		_br 10
+		_notify "bot.nospread !="
+		_label " NoRecoil + NoSpread"
+		_br
+		
+	_tab
+
+_tab
+
+
+
+
